@@ -132,8 +132,10 @@ body {
 	}
   }
 
+ /*----------------------
+ 	MENU ON TLE LEFT
+----------------------*/
   :root {
-    --home-bg-color: #f2f3ee;
     --menu-bg-color: #cbcbc2;
     --silde-btn-border: #808080;
     --slide-btn-bg: #ddf2db;
@@ -199,20 +201,28 @@ body {
     justify-content: center;
     align-items: center;
   }
-  .ham-menu > ul {
+  .ham-menu > ul{
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
     padding: 20px;
     height: 50%;
+
   }
-  .ham-menu > ul > li {
-    font-size: 5rem;
+  .ham-menu > ul > li > a {
+    font-size: 3rem;
     white-space: nowrap;
     letter-spacing: 0.15em;
     cursor: pointer;
     color: rgb(97, 97, 97);
+    text-decoration: none;
   }
+
+  .ham-menu > ul > li > a:hover{
+    color: white;
+  }
+
+
   #ham-menu:checked + label {
     background-color: transparent;
     border-color: var(--dark-green);
@@ -309,7 +319,6 @@ body {
     color: var(--icon-hover-bg);
   }
   a::after {
-    content: "\e806";
     display: inline-block;
     font-family: fontello;
     padding: 5px;
@@ -346,5 +355,6 @@ body {
     font-weight: bold;
   }
   
+
   
   
