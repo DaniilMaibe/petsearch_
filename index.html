@@ -23,7 +23,7 @@
 			<li><a href="#">Питомцы</a></li>
 			<li><a href="shelters.html">Приюты</a></li>
 			<li><a href="about.html">О проекте</a></li>
-			<li><a href="#">Информация</a></li>
+			<li><a href="faq.html">Информация</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -66,9 +66,29 @@
 		
 	</section>
 
+	<script>
+		function f1() {
+  if(document.all) { return false; }
+}
+function f2(e) {
+  if(document.layers || (document.getElementById &! document.all)) {
+    if(e.which==2 || e.which==3) { return false; }
+  }
+}
+if(document.layers) {
+  document.captureEvents(Event.MOUSEDOWN);
+  document.onmousedown = f1;
+}
+else {
+  document.onmouseup = f2;
+  document.oncontextmenu = f1;
+}
+document.oncontextmenu = new function("return false");
+	</script>
+
 	<footer>
-		<p>Visit my site: <a href="https://daniilmaibe.github.io/chuiko_cv/">link</a></p>
-		<p>Copyrigth © 2022 by Daniil Chuyko</p>
+		<p>Посети мой сайт: <a href="https://daniilmaibe.github.io/chuiko_cv/">link</a></p>
+		<p>© 2022 Даниил Чуйко</p>
 	</footer>
 
 </body>

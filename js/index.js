@@ -67,7 +67,7 @@ $(document).ready(function() {
     animateContentColor();
   });
 
-  // Ripple
+  // Пульсация при нажатии на кнопку
   $('[ripple]').on('click', function(e) {
     var rippleDiv = $('<div class="ripple" />'),
       rippleSize = 60,
