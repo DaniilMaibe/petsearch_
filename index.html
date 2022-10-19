@@ -11,11 +11,12 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
 
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 
 <body>
 
-	<header>
+	<!--<header>
 		<h2><a href="index.html"><img src="img/logo.png" alt=""></a></h2>
 		
 		<nav>
@@ -45,7 +46,53 @@
 			  </li>
 			</ul>
 		  </nav>
-	</header>
+	</header>-->
+
+	
+<header class="navbar navbar-expand-lg navbar-light fixed-top py-3" style="background-color: #414a4f;" id="mainNav">
+	<div class="container">
+		<a class="navbar-brand js-scroll-trigger" href="index.html"><img class="logo" src="img/logo.png" alt="PetSearch"></a>
+		<nav class="navbar">
+			<div class="container-fluid">
+				<button class=" bg-white navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Переключатель навигации">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
+		</nav>
+		<div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+			<ul class="nav nav-tabs navbar-nav ml-auto" id="menu">
+				<li class="nav-item"><a class="nav-link" style="color: white;" aria-current="page" href="index.html">Главная</a></li>
+				<li class="nav-item"><a class="nav-link" style="color: white;" aria-current="page" href="map.html">Карта</a></li>
+				<li class="nav-item"><a class="nav-link" style="color: white;" aria-current="page" href="#">Питомцы</a></li>
+				<li class="nav-item"><a class="nav-link" style="color: white;" aria-current="page" href="shelters.html">Приюты</a></li>
+				<li class="nav-item dropdown">
+				  <a class="nav-link dropdown-toggle" style="color: white;" data-bs-toggle="dropdown" href="about.html" role="button" aria-expanded="false">О проекте</a>
+				  <ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="about.html">О проекте</a> </li>
+					<li><a class="dropdown-item" href="about.html#team">Команда</a> </li>
+					<li><a class="dropdown-item" href="about.html#history">История</a> </li>
+					<li><a class="dropdown-item" href="about.html#idea">Вопросы</a> </li>
+				  </ul>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" style="color: white;" data-bs-toggle="dropdown" href="faq.html" role="button" aria-expanded="false">Информация</a>
+					<ul class="dropdown-menu">
+					  <li><a class="dropdown-item" href="faq.html">Информация</a> </li>
+					  <li><a class="dropdown-item" href="faq.html#conditions">Условия в приюте</a> </li>
+					  <li><a class="dropdown-item" href="faq.html#food">Корм для питомцев</a> </li>
+					  <li><a class="dropdown-item" href="faq.html#help">Помощь приюту</a> </li>
+					  <li><a class="dropdown-item" href="faq.html#threedmodel">3D модель кота</a></li>
+					  <li><a class="dropdown-item" href="faq.html#videos">Библиотека видео</a></li>
+					  <li><a class="dropdown-item" href="faq.html#podcasts">Библиотека подкастов</a> </li>
+					</ul>
+				  </li>
+				
+			</ul>
+		</div>
+	</div>
+	
+	  
+</header>
 
 
 	<section class="hero">
@@ -89,6 +136,10 @@
 		<p>Посети мой сайт: <a href="https://daniilmaibe.github.io/chuiko_cv/">link</a></p>
 		<p>© 2022 Даниил Чуйко</p>
 	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+
 
 </body>
 
