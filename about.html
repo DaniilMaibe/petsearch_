@@ -18,14 +18,32 @@
 	<header>
 		<h2><a href="index.html"><img src="img/logo.png" alt=""></a></h2>
 		<nav>
-			<ul class="topmenu">
-			<li><a href="map.html">Карта</a></li>
-			<li><a href="#">Питомцы</a></li>
-			<li><a href="shelters.html">Приюты</a></li>
-			<li><a href="about.html">О проекте</a></li>
-			<li><a href="faq.html">Информация</a></li>
+			<ul class="topmenu menu-ul">
+			  <li><a href="index.html">Главная</a></li>
+			  <li><a href="map.html">Карта</a></li>
+			  <li><a href="#">Питомцы</a></li>
+			  <li><a href="shelters.html">Приюты</a></li>
+			  <li><a href="about.html" class="submenu-link">О проекте </a>
+				<ul class="submenu">
+				  <li><a href="about.html">О проекте</a></li>
+				  <li><a href="about.html#team">Команда</a></li>
+				  <li><a href="about.html#history">История</a></li>
+				  <li><a href="about.html#idea">Вопросы</a></li>
+				</ul>
+			  </li>
+			  <li><a href="faq.html" class="submenu-link">Информация </a>
+				<ul class="submenu">
+				  <li><a href="faq.html">Информация</a></li>
+				  <li><a href="faq.html#conditions">Условия в приюте</a></li>
+				  <li><a href="faq.html#food">Корм для питомцев</a></li>
+				  <li><a href="faq.html#help">Помощь приюту</a></li>
+				  <li><a href="faq.html#threedmodel">3D модель кота</a></li>
+				  <li><a href="faq.html#videos">Библиотека видео</a></li>
+				  <li><a href="faq.html#podcasts">Библиотека подкастов</a></li>
+				</ul>
+			  </li>
 			</ul>
-		</nav>
+		  </nav>
 	</header>
 
 
@@ -34,50 +52,60 @@
 		<h1>О проекте</h1>
 	</section>
 
-  <section class="features">
+  <section class="features" id="team">
 		<h3 class="title">Наша команда</h3>
 		<hr>
 
 		<ul class="grid">
 			<li>
 				<img src="img/kris.png" alt="" width="200px">
-				<h4>Кристина</h4>
+				<h4 style="margin-top: 10px;">Кристина</h4>
 				<p>Специалист по backend разработке</p>
 			</li>
 			<li>
 				<img src="img/anna.png" alt="" width="200px">
-				<h4>Анна</h4>
+				<h4 style="margin-top: 10px;">Анна</h4>
 				<p>Специалист по frontend разработке</p>
 			</li>
 			<li>
 				<img src="img/daniil.png" alt="" width="200px">
-				<h4>Даниил</h4>
+				<h4 style="margin-top: 10px;">Даниил</h4>
 				<p>Специалист по машинному обучению</p>
 			</li>
 		</ul>
 	</section>
 
-  <section class="history">
+  <section class="history" id="history">
 		<h3 class="title">История</h3>
-		*в разработке*
+		<hr>
+		<p>Идея проекта появилась в начале осени 2022 года. Инициативная группа студентов приступила к разработке сразу же после появлении идеи.</p>
+		<p>Почему мы решили этим заняться? Исходя из текущей ситуации в мире, довольно много домашних животных сейчас сдаются в приюты или что ещё хуже выдворяются на улицу. Мы не можем на это спокойно смотреть и сильно заинтересованы в том, чтобы бедные животные нашли своих хозяев, которые будут о них заботиться, любить и ухаживать.</p>
+		<p>На данный момент мы сотрудничаем с небольшим количеством приютов, но готовы к знакомству с новыми приютами и новыми питомцами. Мы не просим денег за размещение животных на сайте, потому что самое главное для нас - поиск дома для животных.</p>
+		<p>Если же у вас есть желание как-то помочь, то можете осуществить финансовую поддержку приютов через сайты самих приютов или на номера телефонов их контактных лиц.</p>
 	</section>
 
-  <section class="idea">
-		<h3 class="title">Задумка</h3>
+  <section class="idea" id="idea">
+		<h3 class="title">Интересные вопросы</h3>
 		<hr>
 		<ul class="grid">
 			<li>
-				<h4 class="title_history">Почему так?</h4>
-          <p>Чтобы найти новый дом животным из приютов</p></p>
+				<h4 class="title_history">Сколько мы получаем за проект?</h4>
+          		<p>Мы работаем на безвозмедной основе, ничего не зарабатываем, а получаем лишь приятные эмоции, когда питомцы находят себе новый дом.</p>
 			</li>
 			<li>
-    </ul>
-    <ul>
-      <li>
-				<h4 class="title_history">Кому это нужно?</h4>
-        <p>Животным и потенциальным хозяевам, которые ищут себе домашних животных</p>
+    	</ul>
+    	<ul>
+      		<li>
+				<h4 class="title_history">Кому нужен ваш проект?</h4>
+        		<p>Животным и потенциальным хозяевам, которые ищут себе домашних животных</p>
 			</li>
 		</ul>
+		<ul>
+			<li>
+			  <h4 class="title_history">Животные злые и агрессивные?</h4>
+			  <p>Нужно понимать, что у каждого животного свой характер. Сначала, когда животного берут с улицы, он может быть злым и бояться людей, потому что до этого с ним плохо обходились. Но через пару месяцев после заботы с нашей стороны характер смягчается и питомцы становятся контактными, добрыми и ласковыми.</p>
+		  </li>
+	  </ul>
 	</section>
 
 </body>

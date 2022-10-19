@@ -109,7 +109,7 @@ header{
 	justify-content: space-between;
 	align-items: center;
 	color: #fff;
-	padding: 35px 100px 0;
+	padding: 10px 20px 0;
 }
 
 header h2{
@@ -609,3 +609,84 @@ footer p a{
 .title_history{
 	text-align: center;
 }
+
+
+header {
+	text-align: center;
+  }
+
+  header a {
+	text-decoration: none;
+	outline: none;
+	display: block;
+	transition: .3s ease-in-out;
+  }
+
+  .logo {
+	color: #ffffff;
+	font-family: 'Playfair Display', serif;
+	font-size: 2.5em;
+	padding: 5px 0;
+  }
+
+  nav {
+	display: table;
+	margin: 0 20px;
+  }
+  
+  nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+
+
+  .topmenu:after {
+	clear: both;
+  }
+  .topmenu > li {
+	width: 20%;
+	float: left;
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
+  }
+  .topmenu > li > a {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #ffffff;
+	padding: 20px 10px;
+  }
+  .topmenu li a:hover { color: #aca9a9; }
+  .submenu-link:after {
+	content: "\f107";
+	font-family: "FontAwesome";
+	color: inherit;
+  }
+  .submenu {
+	text-transform: uppercase;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	z-index: 5;
+	width: 180px;
+	opacity: 0;
+	transform: scaleY(0);
+	transform-origin: 0 0;
+	transition: .5s ease-in-out;
+  }
+  .submenu a {
+	text-align: left;
+	padding: 12px 15px;
+	font-size: 13px;
+	border-bottom: 1px solid rgba(255,255,255,.1);
+  }
+  .submenu li:last-child a { border-bottom: none; }
+  .topmenu > li:hover .submenu {
+	opacity: 1;
+	transform: scaleY(1);
+  }
+
+  .menu-ul{
+	display: flex;
+	width: 1000px;
+  }
