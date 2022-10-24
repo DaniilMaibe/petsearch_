@@ -6,7 +6,6 @@
 body {
 	background: #ffffff;
 	color: rgba(0, 0, 0, 0.6);
-	font-family: "Roboto", sans-serif;
 	font-size: 14px;
 	line-height: 1.6em;
 	-webkit-font-smoothing: antialiased;
@@ -168,7 +167,6 @@ body {
     font-size: 10px;
     color: var(--text-color);
     font-weight: normal;
-    font-family: sans-serif;
     background-color: var(--home-bg-color);
   }
   
@@ -305,14 +303,12 @@ body {
     line-height: 1.5em;
     word-spacing: 0.5em;
     letter-spacing: 0.1em;
-    font-family: "OpenSansCondensed-Light";
   }
   a {
     font-size: 1.6rem;
     line-height: 1.5em;
     word-spacing: 0.5em;
     letter-spacing: 0.1em;
-    font-family: "OpenSansCondensed-Light";
     display: inline;
     font-weight: bold;
     padding: 7px;
@@ -320,7 +316,6 @@ body {
   }
   a::after {
     display: inline-block;
-    font-family: fontello;
     padding: 5px;
     font-size: 1.6rem;
     transform: rotate(-90deg);
@@ -330,14 +325,12 @@ body {
     line-height: 1.5em;
     word-spacing: 0.5em;
     letter-spacing: 0.1em;
-    font-family: "OpenSansCondensed-Bold", sans-serif;
   }
   .title {
     font-size: 3rem;
     line-height: 1.5em;
     word-spacing: 0.5em;
     letter-spacing: 0.1em;
-    font-family: "OpenSansCondensed-Bold", sans-serif;
     color: var(--icon-hover-bg);
     padding: 10px;
   }
@@ -346,7 +339,6 @@ body {
     line-height: 1.5em;
     word-spacing: 0.5em;
     letter-spacing: 0.1em;
-    font-family: "Patua One";
   }
   .centre-text {
     text-align: center;

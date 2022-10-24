@@ -112,9 +112,6 @@ header{
 	padding: 10px 20px 0;
 }
 
-header h2{
-	font-family: 'Quicksand', sans-serif;
-}
 
 header nav{
 	display: flex;
@@ -624,7 +621,6 @@ header {
 
   .logo {
 	color: #ffffff;
-	font-family: 'Playfair Display', serif;
 	font-size: 2.5em;
 	padding: 5px 0;
   }
@@ -648,7 +644,6 @@ header {
 	width: 20%;
 	float: left;
 	position: relative;
-	font-family: 'Open Sans', sans-serif;
   }
   .topmenu > li > a {
 	text-transform: uppercase;
@@ -659,7 +654,6 @@ header {
   .topmenu li a:hover { color: #aca9a9; }
   .submenu-link:after {
 	content: "\f107";
-	font-family: "FontAwesome";
 	color: inherit;
   }
   .submenu {
