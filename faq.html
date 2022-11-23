@@ -160,6 +160,99 @@
 		
 	</section>
 
+	<section>
+		<h3 class="title">Калькулятор человеческого возраста для питомца</h3>
+		<p>Посчитайте сколько лет было бы вашему питомцу, если бы он был человеком</p>
+		<hr>
+		<div style="margin:20px; border:#aaa solid 1px; width: 700px; margin: 0 auto;">
+			<table id='glavnoe' border='0' cellspacing='0' cellpadding='10' style="margin-top:15px; width:100%">
+				<tr>
+	
+					<td scope='col' style='width: 25%; text-align: center;' valign='top'>
+	
+						<font id='vagnaia_informacia'>Возраст:</font><br>
+						<select id='vozrast' size='1'
+							style='height: 40px; font-size: 20px; padding: 0 10px; border-radius: 3px;'>
+							<option value='' selected></option>
+							<option value='0.2'>3 - 6 мес.</option>
+							<option value='0.4'>7 - 12 мес.</option>
+							<option value='0.6'>1 - 2 года</option>
+							<option value='0.8'>3 - 10 лет</option>
+							<option value='1'>10+ лет</option>
+						</select>
+					</td>
+					<td scope='col' style='width: 25%; text-align: center;' valign='top'>
+						<font id='vagnaia_informacia'>Вес:</font><br>
+						<select id='ves' size='1'
+							style='height: 40px; font-size: 20px; padding: 0 10px; border-radius: 3px;'>
+							<option value='' selected></option>
+							<option value='1'>1</option>
+							<option value='2'>2</option>
+							<option value='3'>3</option>
+							<option value='4'>4</option>
+							<option value='5'>5</option>
+							<option value='6'>6</option>
+							<option value='7'>7</option>
+							<option value='8'>8</option>
+							<option value='9'>9</option>
+							<option value='10'>10</option>
+						</select>
+					</td>
+					<td scope='col' style='width: 25%; text-align: center;' valign='top'>
+						<font id='vagnaia_informacia'>Тип:</font><br>
+						<select id='tip' size='1'
+							style='height: 40px; font-size: 20px; padding: 0 10px; border-radius: 3px;'>
+							<option value='' selected></option>
+							<option value='1.6'>Активная</option>
+							<option value='1.2'>Неактивная</option>
+							<option value='1.8'>Беременная</option>
+							<option value='1.0'>Уход при болезне</option>
+							<option value='1.3'>Набор веса</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan='5' valign='top' style='text-align:center'>
+	
+						<font id='vagnaia_informacia'>Уровень физической активности:</font><br>
+						<select id='aktivnost' size='1'
+							style='height: 40px; font-size: 20px; padding: 0 10px; border-radius: 3px;'>
+							<option value='' selected></option>
+							<option value='0.8'>Минимальный </option>
+							<option value='1'>Средний </option>
+							<option value='1.2'>Повышенный </option>
+						</select>
+						<br />
+	
+						<input type='submit' name='sub_kalorii' value='Посчитать' onclick="gotovo()"
+							style='cursor:pointer; padding:0 20px; margin:20px; color: #fff; background: #2261bf; height: 40px; font-size: 20px; border: 0; border-radius: 3px;'>
+	
+						<div id="rez">
+						</div>
+	
+						<script type="text/javascript">
+							function gotovo() {
+								if (document.getElementById('ves').value == '' || document.getElementById('vozrast').value == '' || document.getElementById('aktivnost').value == '' || document.getElementById('tip').value == '') { return alert('Вы указали не все параметры!'); }
+
+								var ves2 = document.getElementById('ves').value;
+								var vozrast2 = document.getElementById('vozrast').value;
+								var aktivnost2 = document.getElementById('aktivnost').value;
+								var tip2 = document.getElementById('tip').value;
+								var rashod = Math.ceil((30 * ves2 + 70) * vozrast2 * tip2 * aktivnost2);
+
+
+								document.getElementById('rez').innerHTML = "<br>Вам следует давать вашей кошки примерно <font id='vagnaia_informacia'> " + rashod + " ккал</font>";
+							}
+						</script>
+	
+					</td>
+				</tr>
+			</table>
+		</div>
+	
+	
+	</section>
+
 
 	<section class="our-work" id="podcasts">
 		<h3 class="title">Библиотека подкастов</h3>
@@ -285,98 +378,6 @@
 	</section>
 
 
-	<section>
-		<h3 class="title">Калькулятор человеческого возраста для питомца</h3>
-		<p>Посчитайте сколько лет было бы вашему питомцу, если бы он был человеком</p>
-		<hr>
-		<div style="margin:20px; border:#aaa solid 1px; width: 700px; margin: 0 auto;">
-			<table id='glavnoe' border='0' cellspacing='0' cellpadding='10' style="margin-top:15px; width:100%">
-				<tr>
-	
-					<td scope='col' style='width: 25%; text-align: center;' valign='top'>
-	
-						<font id='vagnaia_informacia'>Возраст:</font><br>
-						<select id='vozrast' size='1'
-							style='height: 40px; font-size: 20px; padding: 0 10px; border-radius: 3px;'>
-							<option value='' selected></option>
-							<option value='0.2'>3 - 6 мес.</option>
-							<option value='0.4'>7 - 12 мес.</option>
-							<option value='0.6'>1 - 2 года</option>
-							<option value='0.8'>3 - 10 лет</option>
-							<option value='1'>10+ лет</option>
-						</select>
-					</td>
-					<td scope='col' style='width: 25%; text-align: center;' valign='top'>
-						<font id='vagnaia_informacia'>Вес:</font><br>
-						<select id='ves' size='1'
-							style='height: 40px; font-size: 20px; padding: 0 10px; border-radius: 3px;'>
-							<option value='' selected></option>
-							<option value='1'>1</option>
-							<option value='2'>2</option>
-							<option value='3'>3</option>
-							<option value='4'>4</option>
-							<option value='5'>5</option>
-							<option value='6'>6</option>
-							<option value='7'>7</option>
-							<option value='8'>8</option>
-							<option value='9'>9</option>
-							<option value='10'>10</option>
-						</select>
-					</td>
-					<td scope='col' style='width: 25%; text-align: center;' valign='top'>
-						<font id='vagnaia_informacia'>Тип:</font><br>
-						<select id='tip' size='1'
-							style='height: 40px; font-size: 20px; padding: 0 10px; border-radius: 3px;'>
-							<option value='' selected></option>
-							<option value='1.6'>Активная</option>
-							<option value='1.2'>Неактивная</option>
-							<option value='1.8'>Беременная</option>
-							<option value='1.0'>Уход при болезне</option>
-							<option value='1.3'>Набор веса</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<td colspan='5' valign='top' style='text-align:center'>
-	
-						<font id='vagnaia_informacia'>Уровень физической активности:</font><br>
-						<select id='aktivnost' size='1'
-							style='height: 40px; font-size: 20px; padding: 0 10px; border-radius: 3px;'>
-							<option value='' selected></option>
-							<option value='0.8'>Минимальный </option>
-							<option value='1'>Средний </option>
-							<option value='1.2'>Повышенный </option>
-						</select>
-						<br />
-	
-						<input type='submit' name='sub_kalorii' value='Посчитать' onclick="gotovo()"
-							style='cursor:pointer; padding:0 20px; margin:20px; color: #fff; background: #2261bf; height: 40px; font-size: 20px; border: 0; border-radius: 3px;'>
-	
-						<div id="rez">
-						</div>
-	
-						<script type="text/javascript">
-							function gotovo() {
-								if (document.getElementById('ves').value == '' || document.getElementById('vozrast').value == '' || document.getElementById('aktivnost').value == '' || document.getElementById('tip').value == '') { return alert('Вы указали не все параметры!'); }
-
-								var ves2 = document.getElementById('ves').value;
-								var vozrast2 = document.getElementById('vozrast').value;
-								var aktivnost2 = document.getElementById('aktivnost').value;
-								var tip2 = document.getElementById('tip').value;
-								var rashod = Math.ceil((30 * ves2 + 70) * vozrast2 * tip2 * aktivnost2);
-
-
-								document.getElementById('rez').innerHTML = "<br>Вам следует давать вашей кошки примерно <font id='vagnaia_informacia'> " + rashod + " ккал</font>";
-							}
-						</script>
-	
-					</td>
-				</tr>
-			</table>
-		</div>
-	
-	
-	</section>
 
 
 
