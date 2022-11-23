@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
 	<link rel="icon" href="img/icon.png">
+	<script src="https://www.google.com/jsapi"></script>
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
@@ -134,9 +135,136 @@
 		<p>С помощью карты можно посмотреть, где находится ближайший приют</p>
 		<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A57f0ce5a3718a6ab07eb3ef62c687d076a4501111d730307f2c2b250475dd16a&amp;source=constructor" width="700" height="400" frameborder="0"></iframe>
 	</section>
+	
+	<section class="history" id="map-shelters">
+		<h3 class="title">Наша работа в графиках</h3>
+		<hr>
+		<div id="air" style="width: 900px; height: 500px;"></div>
+		<script>
+			google.load("visualization", "1", { packages: ["corechart"] });
+			google.setOnLoadCallback(drawChart);
+			function drawChart() {
+				var data = google.visualization.arrayToDataTable([
+					['Животные', 'Количество'],
+					['Собаки', 55],
+					['Кошки', 30],
+					['Кролики', 5],
+					['Морские свинки', 1]
+				]);
+				var options = {
+					title: 'Какие у нас питомцы?',
+					is3D: true,
+					pieResidueSliceLabel: 'Остальное'
+				};
+				var chart = new google.visualization.PieChart(document.getElementById('air'));
+				chart.draw(data, options);
+			}
+		</script>
+
+		<div id="oil" style="width: 900px; height: 500px;"></div>
+		<script>
+			google.load("visualization", "1", { packages: ["corechart"] });
+			google.setOnLoadCallback(drawChart);
+			function drawChart() {
+				var data = google.visualization.arrayToDataTable([
+					['Год', 'Приняли', 'Отдали'],
+					['2020', 50, 16],
+					['2021', 112, 79],
+					['2022', 87, 76]
+				]);
+				var options = {
+					title: 'Сколько животных мы приютили и отдали в добрые руки?',
+					hAxis: { title: 'Год' },
+					vAxis: { title: 'Кол-во питомцев' }
+				};
+				var chart = new google.visualization.ColumnChart(document.getElementById('oil'));
+				chart.draw(data, options);
+			}
+		</script>
+
+		<div id="donutchart" style="width: 900px; height: 500px;"></div>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript">
+			google.charts.load("current", { packages: ["corechart"] });
+			google.charts.setOnLoadCallback(drawChart);
+			function drawChart() {
+				var data = google.visualization.arrayToDataTable([
+					['Название приюта', 'Кол-во питомцев'],
+					['Дубовая роща', 38],
+					['GetDog', 14],
+					['Альма', 24],
+					['Бескудниково', 18],
+					['Каждая собака', 14]
+				]);
+
+				var options = {
+					title: 'Количество питомцев в приютах',
+					pieHole: 0.4,
+				};
+
+				var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+				chart.draw(data, options);
+			}
+		</script>
+
+		<div id="curve_chart" style="width: 900px; height: 500px"></div>
+			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+			<script type="text/javascript">
+				google.charts.load('current', { 'packages': ['corechart'] });
+				google.charts.setOnLoadCallback(drawChart);
+
+				function drawChart() {
+					var data = google.visualization.arrayToDataTable([
+						['Год', 'Кошки', 'Собаки'],
+						['2020', 34, 16],
+						['2021', 75, 37],
+						['2022', 44, 53]
+					]);
+
+					var options = {
+						title: 'Количество питомцев',
+						curveType: 'function',
+						legend: { position: 'bottom' }
+					};
+
+					var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+					chart.draw(data, options);
+				}
+			</script>
+
+			<br><br><br>
+
+		<div style="font-weight:bold;">Какие акции мы проводили?</div>
+		<div id="timeline" style="width: 1200px; height: 500px;"></div>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript">
+			google.charts.load('current', { 'packages': ['timeline'] });
+			google.charts.setOnLoadCallback(drawChart);
+			function drawChart() {
+				var container = document.getElementById('timeline');
+				var chart = new google.visualization.Timeline(container);
+				var dataTable = new google.visualization.DataTable();
+
+				dataTable.addColumn({ type: 'string', id: 'President' });
+				dataTable.addColumn({ type: 'date', id: 'Start' });
+				dataTable.addColumn({ type: 'date', id: 'End' });
+				dataTable.addRows([
+					['Проект "НАДО БРАТЬ!"', new Date(2021, 3, 30), new Date(2022, 1, 12)],
+					['Месяц помощи животным', new Date(2021, 4, 4), new Date(2021, 5, 4)],
+					['Проект "Подари надежду"', new Date(2021, 11, 15), new Date(2022, 2, 15)]]);
+
+
+				chart.draw(dataTable);
+			}
+		</script>
 
 
 
+
+	</section>
+
+	<script src="https://cdn.anychart.com/js/latest/anychart-bundle.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
 	<footer>
